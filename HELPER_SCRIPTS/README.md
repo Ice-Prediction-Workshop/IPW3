@@ -56,8 +56,8 @@ The output zone names are automatically formatted using the IPW3 convention, for
 
 ```text
 SLICE_Y_0p9144_BINS03_KS_1mm_CUTDATA
-SLICE_Y_0p9144_BINS03_KS_1mm_SINGLE_LAYER_ICE_SHAPE
-SLICE_Y_0p9144_BINS03_KS_1mm_FINAL_LAYER_ICE_SHAPE
+SLICE_Y_0p9144_BINS03_KS_1mm_SINGLE_LAYER
+SLICE_Y_0p9144_BINS03_KS_1mm_FINAL_LAYER
 ```
 
 ### Main options
@@ -73,7 +73,7 @@ SLICE_Y_0p9144_BINS03_KS_1mm_FINAL_LAYER_ICE_SHAPE
 | `--ipw3_CUTDATA` | Write the output using the IPW3 cut-data variable list. |
 | `--ipw3_ICE_SHAPE` | Write the output using the IPW3 ice-shape variable list. |
 | `--binID` | Droplet-bin identifier used in the zone name, for example `03`, `07`, or `15`. |
-| `--OutputType` | Dataset identifier added at the end of the zone name, for example `CUTDATA`, `SINGLE_LAYER_ICE_SHAPE`, or `FINAL_LAYER_ICE_SHAPE`. |
+| `--OutputType` | Dataset identifier added at the end of the zone name, for example `CUTDATA`, `SINGLE_LAYER`, or `FINAL_LAYER`. |
 | `--roughnessKS` | Roughness height in mm used in the zone name. For example, `1.0` becomes `KS_1mm`. |
 
 ### NACA0012 Example
@@ -132,20 +132,20 @@ python "${CUT_TOOL_PATH}" \
   -output "./${GEO_AVG}.dat" \
   --ipw3_ICE_SHAPE \
   --binID "${BIN_ID}" \
-  --OutputType SINGLE_LAYER_ICE_SHAPE \
+  --OutputType SINGLE_LAYER \
   --roughnessKS "${ROUGHNESS_KS_MM}"
 ```
 
 For a final-layer ice shape, replace:
 
 ```bash
---OutputType SINGLE_LAYER_ICE_SHAPE
+--OutputType SINGLE_LAYER
 ```
 
 with:
 
 ```bash
---OutputType FINAL_LAYER_ICE_SHAPE
+--OutputType FINAL_LAYER
 ```
 
 ### Example output
@@ -159,7 +159,7 @@ ZONE T="SLICE_Y_0p9144_BINS03_KS_1mm_CUTDATA"
 The ice-shape file will contain a zone name similar to:
 
 ```text
-ZONE T="SLICE_Y_0p9144_BINS03_KS_1mm_SINGLE_LAYER_ICE_SHAPE"
+ZONE T="SLICE_Y_0p9144_BINS03_KS_1mm_SINGLE_LAYER"
 ```
 
 ### ONERA M6 example
@@ -224,20 +224,20 @@ python "${CUT_TOOL_PATH}" \
   -output "./${GEO_AVG}.dat" \
   --ipw3_ICE_SHAPE \
   --binID "${BIN_ID}" \
-  --OutputType SINGLE_LAYER_ICE_SHAPE \
+  --OutputType SINGLE_LAYER \
   --roughnessKS "${ROUGHNESS_KS_MM}"
 ```
 
 For a final-layer ice shape, replace:
 
 ```bash
---OutputType SINGLE_LAYER_ICE_SHAPE
+--OutputType SINGLE_LAYER
 ```
 
 with:
 
 ```bash
---OutputType FINAL_LAYER_ICE_SHAPE
+--OutputType FINAL_LAYER
 ```
 
 For the settings above, the cut-data file will contain zones similar to:
@@ -251,9 +251,9 @@ ZONE T="SLICE_Y_1p4_BINS03_KS_1mm_CUTDATA"
 The ice-shape file will contain zones similar to:
 
 ```text
-ZONE T="SLICE_Y_0p1_BINS03_KS_1mm_SINGLE_LAYER_ICE_SHAPE"
-ZONE T="SLICE_Y_0p75_BINS03_KS_1mm_SINGLE_LAYER_ICE_SHAPE"
-ZONE T="SLICE_Y_1p4_BINS03_KS_1mm_SINGLE_LAYER_ICE_SHAPE"
+ZONE T="SLICE_Y_0p1_BINS03_KS_1mm_SINGLE_LAYER"
+ZONE T="SLICE_Y_0p75_BINS03_KS_1mm_SINGLE_LAYER"
+ZONE T="SLICE_Y_1p4_BINS03_KS_1mm_SINGLE_LAYER"
 ```
 
 ### Notes

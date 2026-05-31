@@ -82,7 +82,7 @@ Important buttons on your fork page include:
 
 When your fork contains changes that are not yet submitted to the main repository, GitHub will indicate that your branch is ahead of the original repository. Use `Contribute` and then `Open pull request` to submit your changes.
 
-<img src="figures/CONTRIBUTE_SYNC_HIGHLIGHT.png" alt="Forked IPW3 repository showing the Contribute menu and the Open pull request button" width="900">
+<img src="figures/FORK_AHEAD.png" alt="Forked IPW3 repository showing the Contribute menu and the Open pull request button" width="900">
 
 ---
 
@@ -90,7 +90,11 @@ When your fork contains changes that are not yet submitted to the main repositor
 
 GitHub does not provide a direct browser-based copy/paste operation for folders. The following workflow can be used through the web interface.
 
-Participants should copy the structure from:
+Participants should download `.zip` version of the repository from:
+
+<img src="figures/DOWNLOAD_FOLDER.png" alt="Download the .zip version of the repository" width="900">
+
+Participants should then copy the submission structure from the template folder:
 
 ```text
 000_TEMPLATE_SUBMISSION
@@ -113,24 +117,6 @@ where:
 - `PID` is the participant ID assigned by the IPW3 organizers.
 - `ORGNAME` is the organization or affiliation.
 - `SOLVERNAME` is the solver used to generate the results.
-
-To create a folder in GitHub:
-
-1. Click `Add file`.
-2. Select `Create new file`.
-3. In the filename box, enter the folder path followed by `/.gitkeep`.
-
-For example:
-
-```text
-010_POLIMO_CHAMPS/.gitkeep
-```
-
-Git tracks files rather than empty folders, so `.gitkeep` is used as a placeholder until the actual submission files are uploaded.
-
-4. Click `Commit changes`.
-5. Add a clear commit message.
-6. Commit the change to the `main` branch of your fork.
 
 ---
 
@@ -177,20 +163,20 @@ This script can be used to extract the required slice data and generate files fo
 
 ## Uploading submission files
 
-After preparing your files locally, return to your submission folder inside your fork.
+After preparing your files locally, return to your submission repository inside your fork.
 
 To upload files:
 
 1. Navigate to the appropriate folder in your fork.
 2. Click `Add file`.
 3. Select `Upload files`.
-4. Drag and drop the prepared files, or browse to select them.
+4. Drag and drop the prepared folder.
 5. Add a clear commit message.
 6. Click `Commit changes`.
 
 <img src="figures/ADD_FILE.png" alt="Forked IPW3 repository showing the Add file menu with Upload files option" width="900">
 
-Upload the prepared files by dragging them into the upload area or by selecting them manually.
+Upload the prepared files by dragging the folder into the upload area or by selecting them manually.
 
 <img src="figures/UPLOADING.png" alt="GitHub upload page showing the drag-and-drop file upload area and commit message fields" width="900">
 
