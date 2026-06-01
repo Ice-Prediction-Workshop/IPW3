@@ -42,7 +42,9 @@ The repository includes:
 
 ---
 
-## Creating your fork
+## Start Your Submission by Creating Your Fork
+
+Start your submission process by creating your fork of the IPW3 repository.
 
 A fork is a personal copy of the repository under your GitHub account. It allows you to prepare and upload your submission files without directly modifying the main workshop repository.
 
