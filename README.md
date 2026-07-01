@@ -9,7 +9,7 @@ Please remove any unused sections and adjust this README as needed for your subm
 
 **Name(s):**
 
-Dr. Francesco Capizzano
+Dr. Francesco Capizzano and
 Eng. Andrea Conte
 
 **Organization / Affiliation:**
