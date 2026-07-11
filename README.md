@@ -2,14 +2,14 @@
 
 ## Dataset 01 Details
 
-Use this README to provide the participant, solver and grid information associated with **Dataset 01 (`D01`)**.
-Please remove any unused sections and adjust this README as needed for your submission.
+The dataset **Dataset 01 (`D01`)** contains numerical results for IPW3 by Italian Aerospace Research Centre - CIRA.
+
 
 ## Participant Information
 
 **Name(s):**
 
-Dr. Francesco Capizzano and
+Dr. Francesco Capizzano
 Eng. Andrea Conte
 
 **Organization / Affiliation:**
@@ -27,9 +27,9 @@ f.capizzano@cira.it
 The CIRA-SIMBA simulation system consists of different modules each of which performs a specific task.
 
 - the SIMBA_MESH v240, the adaptive and automatic Cartesian mesh generator
-- the SIMBA_FLOW_v648, the Immersed Boundary flow-solver
-- the SIMBA_ICE_v300, the Eulerian droplet trajectory and ice-accretion solvers
-- the SIMBA_THERMO_v150, the thermodynamic solver based on the iiterative Messinger model.
+- the SIMBA_FLOW_v648, the Immersed Boundary (IB) flow-solver
+- the SIMBA_ICE_v300, the Eulerian IB droplet trajectory and ice-accretion solvers
+- the SIMBA_THERMO_v150, the thermodynamic surface solver based on the iterative Messinger model.
 
 **MESH Generation:**
 The SIMBA_MESH module generates automatically a Cartesian mesh around multi-component configurations inside a user-defined control volume. The tool can import multiple surfaces described by triangles and applies an efficient ‘ray-tracing’ algorithm to tag them with respect to the surrounding cells. A fully unstructured data management allows the use of recursive and very fast cell-splitting procedures to cluster cells in the wall proximity. Smooth variation of mesh density between differently refined zones are guaranteed to increase the flow solver robustness. A procedure to obtain accurate data on the geometry surfaces is foreseen for post-processing purposes. A robust algorithm is developed to reconstruct a surface triangulation starting from the intersection points among volume cells and the geometry surfaces. Lastly, a pre-existing solution is used to detect zones that need to be refined due to large flow gradients. Afterwards, adaptive mesh refinements are carried out based on proper flow-based sensors. 
@@ -38,7 +38,7 @@ The SIMBA_MESH module generates automatically a Cartesian mesh around multi-comp
 The SIMBA_FLOW module is designed for studying compressible, inviscid and viscous flows around complex geometries as well as dynamic motions of multi-component configurations. It solves the Reynolds Averaged Navier-Stokes equations (RANS) with k-omega turbulence modelling on Cartesian meshes by applying an IB treatment in the wall proximity. Alternatively, a hybrid RANS-LES scale-resolving modelling is available based on the so-called eXtra-Large Eddy (X-LES) approach. The differential equations are solved by a cell-centered finite volume (FV) method based on a second-order and skew-symmetric central difference scheme (CDS) for the convective terms. The viscous terms are obtained by averaging cell-center gradients and applying the usual directional correction. Time integration is obtained by using an implicit second-order backward scheme coupled with the dual-time stepping procedure. The IB method is based on a discrete forcing and mimics the effects of solid walls inside the flow field. The body force is obtained by the direct imposition of sharp boundary conditions (BCs). In case of high-Reynolds numbers, proper wall modelling can be activated to account for the non-linearity of the boundary-layer. In particular, a two-layer approach is developed to answer the need of a model that goes beyond the actual capabilities of classical wall-functions. It is based on a decomposition of the near-wall region. The outer one is governed by the above RANS or hybrid RANS-LES equations. In the proximity of the wall, an inner zone is established that gets information from the outer flow field and returns back the wall shear-stress. The latter is obtained by integrating simplified thin-boundary-layer equations along a normal to the wall sub-grid. Furthermore, a hybrid Lagrangian-Eulerian approach is designed to consider the motion of multiple bodies through a fixed Cartesian mesh. That is, the cells’ volumes do not move in space but rather they observe the solid walls crossing themselves. A dynamic discrete forcing makes use of a moving least-square procedure which has been validated by simulating well-known benchmarks available for rigid body motions. Partitioned fluid-structure interactions (FSI) strategies can be applied for analysing aeroelastic phenomena. 
 
 **Turbulence Model:**
-For the current dataset we used the k-omega TNT modelling.
+For the current dataset we used the k-omega TNT turb. modelling.
 
 **Droplet Trajectory Algorithm:**
 The SIMBA_ICE solver estimates the amount of water that impinges on three-dimensional aerodynamic surfaces in case the air-flow contains water droplets in the dispersed phase. In particular, the solver considers the transport of liquid particles (water) in a carrier gas flow (air) by means of an Eulerian model. The latter consist of the balance of mass, momentum and energy of water droplets whose interaction with the air is assured by proper source terms. Once the aerodynamic field is known, the water droplets are transported and their impingement on the surfaces is computed by imposing proper BCs. The set of Eulerian PDEs is integrated in space by means of a FV Cartesian method that adopts a sharp discrete IB forcing near the wall.
@@ -54,44 +54,58 @@ Lagrangian Immersed Boundary method.
 The dynamic multi-layer approach is based on the coupling of the above following modules:
 air-phase, water-phase, thermodynamic 3D Messinger-based liquid film-model, Lagrangian deformation of surface-mesh, volume-mesh ice-tagging and local cell-refinement.
 
+
 ## Grid Information
 
-Only complete this section if you used grids that are different from the committee-supplied grids.
+Cartesian meshesthat are different from the committee-supplied grids.
+We did not use the committe-supplied grids as they all refer to body-conforming volume-cells. On the contrary we generated Cartesian meshes with adaptive mesh refinements (AMR) by running our in-house SIMBA_MESH Cartesian mesh generator.
 
-### `TC_NACA0D012_AE3933_D01`
+
+### `TC_NACA0D012_AE3932_D01 and TC_NACA0D012_AE3933_D01`
 
 **Grid Type:**
-Cartesian grid with adaptive mesh refinement (AMR)
+Cartesian grid with adaptive mesh refinement (AMR).
 
 **Grid Generator:**
 SIMBA_MESH_v240
 
-Grid size    ||   L1   |   L2   |   L3   |   L4   || 
+Grid size    ||   L1   |   L2   |   L3   |   L4   || \
 Total cells  ||  55838 |  39296 |  30965 |  26637 ||
-Total nodes  ||
 
 
 ### `TC_ONERAM6_D01`
 
 **Grid Type:**
-Cartesian grid with adaptive mesh refinement (AMR)
+Cartesian grid with adaptive mesh refinement (AMR).
 
 **Grid Generator:**
 SIMBA_MESH_v240
 
-| Grid size   |   `L1`    |  `L2`  |  `L3`   |  `L4`   |
-| Total nodes | SuperFine |  Fine  |  Medium |  Coarse |
+| Grid size   |   `L1`    |  `L2`  |  `L3`   |  `L4`   | \
+| Total nodes | SuperFine |  Fine  |  Medium |  Coarse | \
 | Total cells |  ~170M    |  ~32M  |  ~16M   |  ~4M    |
-| Total nodes |           |        |         |         |
 
 **Additional Grid Notes:**
 3D unstructured, non-isotropic and adaptively refined (AMR) Cartesian mesh
 
 
 ## Other Information
-All the cases were run by using the released 3-bin, 7-bin and 15-bin spectrum of droplet diameters. 
+1) All the "one-shot" cases were run by using the released 3-bin, 7-bin and 15-bin spectra of droplet diameters. 
 That is, running multiple mono-disperse droplet-impingement analyses and combining linearly the collection efficiencies weigthed by LWC ratio.
 
+2) About ice-accretion, the surface triangulation is the same for all cases, indipendently by the volumetric meshes L1-L4 adopted for computing the air- and water-phases. This is because we use the IB method where Cartesian cells do not conform to surface walls. This allows using whatever surface resolution we need. This is, we did not use local surface mesh adaptation for this database.
+In particular, for all one-shot cases on Onera_M6 we used a surface mesh counting 172,414 triangles.
+On the contrary, for all multi-layer cases we used a more refined surface mesh of about 5.7 million elements.
+
+3) We use the following definition for the freezing-fraction:
+
+   FF = Mice / ( Mimp + Mrbi )
+
+   where the local control-volume contributions are 
+
+   Mice = Ice-mass flow rate - Kg/(s*m^2)
+   Mimp = Impinging-mass flow rate - Kg/(s*m^2)
+   Mrbi = Run-back in mass flow rate - Kg/(s*m^2)
 
 
 ## References
