@@ -57,8 +57,7 @@ air-phase, water-phase, thermodynamic 3D Messinger-based liquid film-model, Lagr
 
 ## Grid Information
 
-Cartesian meshesthat are different from the committee-supplied grids.
-We did not use the committe-supplied grids as they all refer to body-conforming volume-cells. On the contrary we generated Cartesian meshes with adaptive mesh refinements (AMR) by running our in-house SIMBA_MESH Cartesian mesh generator.
+We did not use the committe-supplied grids as they all refer to body-conforming volume-cells. On the contrary we generated Cartesian meshes with adaptive mesh refinements (AMR) by running our in-house SIMBA_MESH Cartesian mesh generator. Anyhow, we used the analogous labels for the mesh sizing from the finest L1 to the coarsest L4.
 
 
 ### `TC_NACA0D012_AE3932_D01 and TC_NACA0D012_AE3933_D01`
