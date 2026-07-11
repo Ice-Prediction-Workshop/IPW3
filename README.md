@@ -10,7 +10,7 @@ The dataset **Dataset 01 (`D01`)** contains numerical results for IPW3 by Italia
 **Name(s):**
 
 Dr. Francesco Capizzano \
-Eng. Andrea Conte
+Mr. Andrea Conte
 
 **Organization / Affiliation:**
 
@@ -31,7 +31,7 @@ The CIRA-SIMBA simulation system consists of different modules each of which per
 - the SIMBA_ICE_v300, the Eulerian IB droplet trajectory and ice-accretion solvers
 - the SIMBA_THERMO_v150, the thermodynamic surface solver based on the iterative Messinger model.
 
-**MESH Generation:**
+**Mesh Generation:**
 The SIMBA_MESH module generates automatically a Cartesian mesh around multi-component configurations inside a user-defined control volume. The tool can import multiple surfaces described by triangles and applies an efficient ‘ray-tracing’ algorithm to tag them with respect to the surrounding cells. A fully unstructured data management allows the use of recursive and very fast cell-splitting procedures to cluster cells in the wall proximity. Smooth variation of mesh density between differently refined zones are guaranteed to increase the flow solver robustness. A procedure to obtain accurate data on the geometry surfaces is foreseen for post-processing purposes. A robust algorithm is developed to reconstruct a surface triangulation starting from the intersection points among volume cells and the geometry surfaces. Lastly, a pre-existing solution is used to detect zones that need to be refined due to large flow gradients. Afterwards, adaptive mesh refinements are carried out based on proper flow-based sensors. 
 
 **Flow Algorithm:**
