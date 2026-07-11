@@ -103,8 +103,8 @@ On the contrary, for all multi-layer cases we used a more refined surface mesh o
 
    where the local control-volume contributions are 
 
-   Mice = Ice-mass flow rate - Kg/(s*m^2)
-   Mimp = Impinging-mass flow rate - Kg/(s*m^2)
+   Mice = Ice-mass flow rate - Kg/(s*m^2) \\
+   Mimp = Impinging-mass flow rate - Kg/(s*m^2) \\
    Mrbi = Run-back in mass flow rate - Kg/(s*m^2)
 
 
