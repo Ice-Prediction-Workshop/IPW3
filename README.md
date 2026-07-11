@@ -69,8 +69,10 @@ Cartesian grid with adaptive mesh refinement (AMR).
 **Grid Generator:**
 SIMBA_MESH_v240
 
-Grid size    ||   L1   |   L2   |   L3   |   L4   || \
-Total cells  ||  55838 |  39296 |  30965 |  26637 ||
+|     Mesh    | SuperFine |  Fine  |  Medium |  Coarse | \
+|  Grid size  |   `L1`    |  `L2`  |   `L3`  |   `L4`  | \
+| ----------- | --------- | ------ | ------- | ------- | \
+| Total cells |   55838   |  39296 |  30965  |  26637  |
 
 
 ### `TC_ONERAM6_D01`
@@ -81,8 +83,9 @@ Cartesian grid with adaptive mesh refinement (AMR).
 **Grid Generator:**
 SIMBA_MESH_v240
 
-| Grid size   |   `L1`    |  `L2`  |  `L3`   |  `L4`   | \
-| Total nodes | SuperFine |  Fine  |  Medium |  Coarse | \
+|     Mesh    | SuperFine |  Fine  |  Medium |  Coarse | \
+|  Grid size  |   `L1`    |  `L2`  |   `L3`  |   `L4`  | \
+| ----------  | --------- | ------ | ------- | ------- | \
 | Total cells |  ~170M    |  ~32M  |  ~16M   |  ~4M    |
 
 **Additional Grid Notes:**
