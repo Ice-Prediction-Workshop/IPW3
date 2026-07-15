@@ -1,109 +1,45 @@
 # Submission Details
 
-## Dataset 01 Details
-
-Use this README to provide the participant, solver and grid information associated with **Dataset 01 (`D01`)**.
-
-Please remove any unused sections and adjust this README as needed for your submission.
-
 ## Participant Information
 
-**Name(s):**
+**Name:**
 
-Add participant name(s) here.
+Alberto Della Noce
 
 **Organization / Affiliation:**
 
-Add organization or affiliation here.
+Airbus Commercial Aircraft
 
 **Primary Email:**
 
-Add point-of-contact email here.
-
+alberto.della-noce@airbus.com
 
 ## Solver Information
 
 **Solver Name and Version:**
 
-Add solver name and version here.
+CODA 2026.02.1 \
+IGLOO3D 2.3.1.2
 
 **Flow Algorithm:**
 
-Describe the flow algorithm here.
+Finite Volume, 3 stages, 2nd order
 
 **Turbulence Model:**
 
-Describe the turbulence model here, if applicable.
+Negative Spalart-Allmaras (SA-neg)
 
 **Droplet Trajectory Algorithm:**
 
-Describe the droplet trajectory algorithm here.
+Lagrangian with automatic cloud refinement
 
 **Thermodynamic Algorithm:**
 
-Describe the thermodynamic algorithm here.
+Messinger method
 
 **Surface Grid Deformation Algorithm:**
 
-Describe the surface grid deformation algorithm here.
-
-**Multi-Layer / Multi-Time-Step Methodology:**
-
-Describe the multi-layer or multi-time-step methodology here.
-
-## Grid Information
-
-Only complete this section if you used grids that are different from the committee-supplied grids.
-
-### `TC_NACA0D012_AE3932_D01`
-
-**Grid Type:**
-
-Add grid type here (structured, unstructured, or overset).
-
-**Grid Generator:**
-
-Add grid generator name and version here.
-
-| Grid size | `L1` | `L2` | `L3` | `L4` |
-| --- | --- | --- | --- | --- |
-| Total cells |  |  |  |  |
-| Total nodes |  |  |  |  |
-
-### `TC_NACA0D012_AE3933_D01`
-
-**Grid Type:**
-
-Add grid type here (structured, unstructured, or overset).
-
-**Grid Generator:**
-
-Add grid generator name and version here.
-
-| Grid size | `L1` | `L2` | `L3` | `L4` |
-| --- | --- | --- | --- | --- |
-| Total cells |  |  |  |  |
-| Total nodes |  |  |  |  |
-
-### `TC_ONERAM6_D01`
-
-**Grid Type:**
-
-Add grid type here (structured, unstructured, or overset).
-
-**Grid Generator:**
-
-Add grid generator name and version here.
-
-| Grid size | `L1` | `L2` | `L3` | `L4` |
-| --- | --- | --- | --- | --- |
-| Total cells |  |  |  |  |
-| Total nodes |  |  |  |  |
-
-**Additional Grid Notes:**
-
-Add any additional information needed to describe the non-committee grids here.
-
+Lagrangian node displacement
 
 ## Other Information
 
@@ -116,5 +52,6 @@ Please provide relevant articles, papers, reports, or other references related t
 Example format:
 
 ```text
-Author(s), "Title," Journal/Conference/Report, Year. DOI or URL if available.
+P. Stefanin Volpiani, J.-B. Chapelier, A. Schwöppe, J. Jägersküpper, and S. Champagneux, "Aircraft Simulations Using the New CFD Software from ONERA, DLR, and Airbus," Journal of Aircraft, 2024. 10.2514/1.C037506.
+E. Radenac, "Validation of a 3D ice accretion tool on swept wings of the SUNSET2 program", 8th AIAA Atmospheric and Space Environments Conference, 2016. 10.2514/6.2016-3735.
 ```
