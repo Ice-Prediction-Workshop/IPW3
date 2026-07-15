@@ -92,12 +92,12 @@ SIMBA_MESH_v240
 
 
 ## Other Information
-1) All the "one-shot" cases were run by using the released 3-bin, 7-bin and 15-bin spectra of droplet diameters. 
+1) All the "one-shot" ice-accretion cases were run by using the released 3-bin, 7-bin and 15-bin spectra of droplet diameters. 
 That is, running multiple mono-disperse droplet-impingement analyses and combining linearly the collection efficiencies weigthed by LWC ratio.
 
-2) About ice-accretion, the surface triangulation is the same for all cases, indipendently by the volumetric meshes L1-L4 adopted for computing the air- and water-phases. This is because we use the IB method where Cartesian cells do not conform to surface walls. This allows using whatever surface resolution we need. This is, we did not use local surface mesh adaptation for this database.
-In particular, for all one-shot cases on Onera_M6 we used a surface mesh counting 172,414 triangles.
-On the contrary, for multi-layer cases we used more refined surface meshes.
+2) The surface triangulation is the same for all cases, indipendently by the volumetric meshes L1-L4 adopted for computing the air- and water-phases. This is because we use the IB method where Cartesian cells do not conform to surface walls. This allows using whatever surface resolution we need. This is, we did not use local surface mesh adaptation for this database.
+In particular, for the one-shot cases on Onera_M6 we used a surface mesh counting 172,414 triangles.
+On the contrary, for the multi-layer cases on Onera_M6 we used more refined surface meshes.
 
 3) We use the following definition for the freezing-fraction:
 
