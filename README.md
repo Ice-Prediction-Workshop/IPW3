@@ -97,7 +97,7 @@ That is, running multiple mono-disperse droplet-impingement analyses and combini
 
 2) About ice-accretion, the surface triangulation is the same for all cases, indipendently by the volumetric meshes L1-L4 adopted for computing the air- and water-phases. This is because we use the IB method where Cartesian cells do not conform to surface walls. This allows using whatever surface resolution we need. This is, we did not use local surface mesh adaptation for this database.
 In particular, for all one-shot cases on Onera_M6 we used a surface mesh counting 172,414 triangles.
-On the contrary, for all multi-layer cases we used a more refined surface mesh of about 5.7 million elements.
+On the contrary, for multi-layer cases we used a more refined surface meshes.
 
 3) We use the following definition for the freezing-fraction:
 
