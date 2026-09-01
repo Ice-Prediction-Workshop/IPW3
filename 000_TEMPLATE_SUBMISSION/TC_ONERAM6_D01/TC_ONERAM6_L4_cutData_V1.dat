@@ -43,6 +43,15 @@
                                                      <- Optional ->                 
 VARIABLES = "X" "Y" "Z" "Cp" "HTC" "Beta" "Ts" "FF" "k" "RhoIce" "HTC_CLEAN"
 
+ZONE T="SLICE_Y_0p1_BINS01_KS_XXmm_CUTDATA"
+-999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+
+ZONE T="SLICE_Y_0p75_BINS01_KS_XXmm_CUTDATA"
+-999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+
+ZONE T="SLICE_Y_1p4_BINS01_KS_XXmm_CUTDATA"
+-999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+
 ZONE T="SLICE_Y_0p1_BINS03_KS_XXmm_CUTDATA"
 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 

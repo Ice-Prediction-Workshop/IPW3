@@ -69,10 +69,10 @@ PID_ORGNAME_SOLVERNAME/
 │   └── TC_NACA0012_3932_L4_finalIceShape_V1.dat
 ├── TC_NACA0012_AE3933_D01/
 ├── TC_ONERAM6_D01/
-└── gridConvergence_V1.xlsx
+└── gridConvergence_D01_V1.xlsx
 ```
 
-The file `gridConvergence_V1.xlsx` is used for all grid-convergence-related quantities. Participants should fill in the requested values without changing the column order, row order, sheet names, or file structure. This file is intended to support automated post-processing and comparison of integrated quantities such as aerodynamic coefficients, water mass, ice mass, and evaporated water mass.
+The file `gridConvergence_D01_V1.xlsx` is used for all grid-convergence-related quantities. Participants should fill in the requested values without changing the column order, row order, sheet names, or file structure. This file is intended to support automated post-processing and comparison of integrated quantities such as aerodynamic coefficients, water mass, ice mass, and evaporated water mass.
 
 Each test-case folder contains Tecplot-formatted `.dat` files for the submitted slice data. The number of slices depends on the test case.
 

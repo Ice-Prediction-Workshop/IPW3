@@ -46,10 +46,10 @@ The script can extract two main types of IPW3 files:
 
 2. **Ice-shape files**
 
-   These contain clean and iced coordinates along the requested slice:
+   These contain iced coordinates along the requested slice:
 
    ```text
-   X, Y, Z, X_ICED, Y_ICED, Z_ICED
+   X_ICED, Y_ICED, Z_ICED
    ```
 
 The output zone names are automatically formatted using the IPW3 convention, for example:

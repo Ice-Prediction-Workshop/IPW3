@@ -1243,9 +1243,6 @@ if __name__ == "__main__":
 
     if args.ipw3_ICE_SHAPE:
         args.ipw3VariableNameAliases = [
-            ["X", "CoordinateX"],
-            ["Y", "CoordinateY"],
-            ["Z", "CoordinateZ"],
             ["X_ICED", "X_Iced", "X_iced", "CoordinateX_Iced", "CoordinateX_iced", "x_ice"],
             ["Y_ICED", "Y_Iced", "Y_iced", "CoordinateY_Iced", "CoordinateY_iced", "y_ice"],
             ["Z_ICED", "Z_Iced", "Z_iced", "CoordinateZ_Iced", "CoordinateZ_iced", "z_ice"]
@@ -1294,4 +1291,3 @@ if __name__ == "__main__":
         ErrorQuit('Missing output file!')
 
     slices = performSlices(args)
-

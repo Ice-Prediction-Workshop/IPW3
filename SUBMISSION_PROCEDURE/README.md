@@ -39,11 +39,12 @@ The repository includes:
 - `000_TEMPLATE_SUBMISSION`: template files and folder structure that participants should copy and rename for their own submission.
 - `HELPER_SCRIPTS`: helper scripts for preparing submission files.
 - `SUBMISSION_PROCEDURE`: instructions for submitting data through GitHub.
-- `POST_PROCESS_TOOLS`: planned tools for checking participant submission data.
 
 ---
 
-## Creating your fork
+## Start Your Submission by Creating Your Fork
+
+Start your submission process by creating your fork of the IPW3 repository.
 
 A fork is a personal copy of the repository under your GitHub account. It allows you to prepare and upload your submission files without directly modifying the main workshop repository.
 
@@ -136,10 +137,10 @@ PID_ORGNAME_SOLVERNAME/
 ├── TC_NACA0012_AE3932_D01/
 ├── TC_NACA0012_AE3933_D01/
 ├── TC_ONERAM6_D01/
-└── gridConvergence_V1.xlsx
+└── gridConvergence_D01_V1.xlsx
 ```
 
-The `gridConvergence_V1.xlsx` file is used for all grid-convergence-related quantities. Participants should fill in the requested values without changing the sheet names, column order, row order, or file structure.
+The `gridConvergence_D01_V1.xlsx` file is used for all grid-convergence-related quantities. Participants should fill in the requested values without changing the sheet names, column order, row order, or file structure.
 
 Each test-case folder contains Tecplot-formatted `.dat` files for cut data and ice-shape data. For each grid level, participants should provide files such as:
 
@@ -208,6 +209,7 @@ On the pull request page:
 3. Add a clear title.
 4. Add a short description of the submission.
 5. Click `Create pull request`.
+6. In the right sidebar, find `Reviewers`, click the gear icon or reviewer selector, and assign `kzayni` as a reviewer.
 
 <img src="figures/CREATING_PR.png" alt="GitHub pull request creation page showing base repository, head repository, title, and description fields" width="900">
 
