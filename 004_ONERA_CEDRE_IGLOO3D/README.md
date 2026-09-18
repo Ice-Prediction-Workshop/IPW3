@@ -37,7 +37,7 @@ The RANS equations were solved using the $k–\omega$ SST turbulence model. Surf
 
 **Droplet Trajectory Algorithm:**
 
-Droplet trajectories were computed using the SPIREE Eulerian solver. An implicit $\theta$-scheme was used for temporal discretization together with a second-order finite-volume method for spatial discretization. Aerodynamic drag was modeled using the Schiller–Naumann correlation, while heat transfer between the air and droplets was modeled using the Ranz–Marshall correlation.
+Droplet trajectories were computed using the SPIREE Eulerian solver. An implicit $\theta$-scheme was used for temporal discretization together with a second-order finite-volume method for spatial discretization. Aerodynamic drag was modeled using the Schiller–Naumann correlation.
 
 **Thermodynamic Algorithm:**
 
